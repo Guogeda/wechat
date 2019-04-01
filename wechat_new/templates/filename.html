@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>课件整理</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>课件整理</h1>
+<h3>固体物理</h3>
+<blockquote>
+<a>第一章</a>
+</blockquote>
+<ul>
+<li>
+<a href="filename/SolidStatePhysics/Chapter1/01.ppt">1.1晶体的特征.ppt</a>
+</li>
+<li>
+<a href="filename/SolidStatePhysics/Chapter1/02.ppt">1.2晶体结构.ppt</a>
+</li>
+<li>
+<a href="filename/SolidStatePhysics/Chapter1/03.ppt">1.3晶面和晶向.ppt</a>
+</li>
+<li>
+<a href="filename/SolidStatePhysics/Chapter1/04.ppt">1.4倒格.ppt</a>
+</li>
+<li>
+<a href="filename/SolidStatePhysics/Chapter1/05.ppt">1.5晶体的对称性.ppt</a>
+</li>
+<li>
+<a href="filename/SolidStatePhysics/Chapter1/06.ppt">1.6晶体衍射.ppt</a>
+</li>
+<li>
+<a href="filename/SolidStatePhysics/Chapter1/07.ppt">1.7第一章总结.ppt</a>
+</li>
+
+</ul>
+<blockquote>
+<a>第二章</a>
+</blockquote>
+<ul>
+<li>
+<a href="filename/SolidStatePhysics/Chapter2/01.ppt">2.1晶体结合能的普遍规律.ppt</a>
+</li>
+<li>
+<a href="filename/SolidStatePhysics/Chapter2/02.ppt">2.2离子晶体.ppt</a>
+</li>
+<li>
+<a href="filename/SolidStatePhysics/Chapter2/03.ppt">2.3共价晶体金属晶体.ppt</a>
+</li>
+<li>
+<a href="filename/SolidStatePhysics/Chapter2/04.ppt">2.4非极性分子晶体.ppt</a>
+</li>
+<li>
+<a href="filename/SolidStatePhysics/Chapter2/05.ppt">2.5元素和化合物结合的规律.ppt</a>
+</li>
+<li>
+<a href="filename/SolidStatePhysics/Chapter2/06.ppt">2.6第二章总结.ppt</a>
+</li>
+</ul>
+<h3>智能仪器</h3>
+<blockquote>
+<a>全部课件</a>
+</blockquote>
+<ul>
+<li>
+<a href="filename/IntelligentInstrument/01.ppt">第1章.ppt</a>
+</li>
+<li>
+<a href="filename/IntelligentInstrument/02.ppt">第2章.ppt</a>
+</li>
+<li>
+<a href="filename/IntelligentInstrument/03.ppt">第3章.ppt</a>
+</li>
+<li>
+<a href="filename/IntelligentInstrument/04.ppt">第4章.ppt</a>
+</li>
+<li>
+<a href="filename/IntelligentInstrument/05.ppt">第5章.ppt</a>
+</li>
+<li>
+<a href="filename/IntelligentInstrument/06.ppt">第6章.ppt</a>
+</li>
+<li>
+<a href="filename/IntelligentInstrument/07.ppt">第7章.ppt</a>
+</li>
+<li>
+<a href="filename/IntelligentInstrument/08.ppt">第8章.ppt</a>
+</li>
+<li>
+<a href="filename/IntelligentInstrument/09.ppt">第9章.ppt</a>
+</li>
+<li>
+<a href="filename/IntelligentInstrument/10.doc">智能仪器教学大纲20161009.doc</a>
+</li>
+
+</ul>
+<h3>微机接口</h3>
+<blockquote>
+<a>全部课件</a>
+</blockquote>
+<ul>
+<li>
+<a href="filename/MicrocomputerInterface/01.ppt">第1章.ppt</a>
+</li>
+</ul>
+<h3>嵌入式</h3>
+<blockquote>
+<a>全部课件</a>
+</blockquote>
+<ul>
+<li>
+<a href="filename/PrincipleOfEmbedded/02.pdf">第2章_系统结构与模型.pdf</a>
+</li>
+<li>
+<a href="filename/PrincipleOfEmbedded/03.pdf">第3章_嵌入式硬件系统基础.pdf</a>
+</li>
+</ul>
+<h3>激光原理</h3>
+<blockquote>
+<a>全部课件</a>
+</blockquote>
+<ul>
+<li>
+<a href="filename/LaserPrinciple/01.pptx">第一章.pptx</a>
+</li>
+<li>
+<a href="filename/LaserPrinciple/02.pptx">第二章（1-5）.pptx</a>
+</li>
+<li>
+<a href="filename/LaserPrinciple/03.pptx">第二章（6-12）.pptx</a>
+</li>
+<li>
+<a href="filename/LaserPrinciple/04.pptx">第三章.pptx</a>
+</li>
+<li>
+<a href="filename/LaserPrinciple/05.pptx">第四章.pptx</a>
+</li>
+<li>
+<a href="filename/LaserPrinciple/06.pptx">第五章.pptx</a>
+</li>
+<li>
+<a href="filename/LaserPrinciple/07.pptx">第六章.pptx</a>
+</li>
+<li>
+<a href="filename/LaserPrinciple/08.pptx">总复习</a>
+</li>
+</ul>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
